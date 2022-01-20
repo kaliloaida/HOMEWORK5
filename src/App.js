@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import FilterIndex from "./components/FilterIndex";
 
 function App() {
+  const [filteredColor, setFilteredColor] = useState("yellow");
+  const filterChangeHandler = (selectedColor) => {
+    setFilteredColor(selectedColor);
+  };
+
+  const [filteredGender, setFilteredGender] = useState("Female");
+  const genderChangeHandler = (selectedGender) => {
+    setFilteredGender(selectedGender);
+  };
+
+  const [filteredClock, setFilteredClock] = useState("21:24");
+  const clockChangeHandler = (selectedClock) => {
+    setFilteredClock(selectedClock);
+  };
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FilterIndex
+        selected={filteredColor}
+        onChangeFilter={filterChangeHandler}
+        gender={filteredGender}
+        onChangeGender={genderChangeHandler}
+        clock={filteredClock}
+        onChangeClock={clockChangeHandler}
+
+      />
+      {console.log(filteredColor)}
+      {console.log(filteredGender)}
+      {console.log(filteredClock)}
     </div>
   );
 }

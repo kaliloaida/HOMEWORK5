@@ -1,0 +1,52 @@
+body{
+  background-color: rgb(75, 181, 190);
+}
+.expenses-filter {
+    color: rgb(66, 9, 9);
+    padding: 1rem;
+    margin-left: 350px;
+    width: 700px;
+    background-color: aqua;
+    margin-top: 4rem;
+    
+    
+  }
+  
+  .expenses-filter__control {
+
+    display: flex;
+    justify-content: space-between;
+    
+  
+    padding-left: 50px;
+  }
+  .expenses-filter label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 30px;
+  }
+  .expenses-filter select {
+    font: inherit;
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+
+  .Gender{
+    color: rgb(66, 9, 9);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    background-color: aqua;
+    margin-top: 2rem;
+  }
+  .Gender p{
+    font-weight: bold;
+    padding-left: 40px;
+    font-size: 30px;
+  }
+  
+  
+  
